@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![CircleCI](https://circleci.com/gh/Ibidapo/iReporter-UI/tree/develop.svg?style=svg)](https://circleci.com/gh/Ibidapo/iReporter-UI/tree/develop) [![Maintainability](https://api.codeclimate.com/v1/badges/a5e2137d7eb95667a7a8/maintainability)](https://codeclimate.com/github/Ibidapo/iReporter-UI/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a5e2137d7eb95667a7a8/test_coverage)](https://codeclimate.com/github/Ibidapo/iReporter-UI/test_coverage)
 ## Available Scripts
 
 In the project directory, you can run:

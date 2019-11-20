@@ -4,7 +4,7 @@ import { Provider } from "react-redux"
 
 import AppRoutes from "./AppRoutes"
 import configureStore from "./store/configureStore"
-import "./styles/index.css"
+import "./styles/index.scss"
 
 const store = configureStore()
 

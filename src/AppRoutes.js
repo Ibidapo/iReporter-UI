@@ -2,20 +2,23 @@ import React from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import Header from "./components/Header"
-import { Home, About, Topics, NotFoundPage } from "./components/App"
-import "./styles/App.scss"
+import { Home, NotFoundPage } from "./components/App"
+import JoinUs from "./views/JoinUs"
 
 const AppRoute = () => (
   <Router>
-    <div className="App">
+    <>
       <Header />
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
-        <Route exact path="/" component={Home} />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </div>
+      <div id="main">
+        <div className="container">
+          <Switch>
+            <Route path="/join-us" component={JoinUs} />
+            <Route exact path="/" component={Home} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+      </div>
+    </>
   </Router>
 )
 

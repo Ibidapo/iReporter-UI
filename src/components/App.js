@@ -1,9 +1,18 @@
 import React from "react"
 import { Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom"
 
-export function Home() {
-  return <p>Welcome to the Home Page</p>
-}
+import logo from "../images/logo.svg"
+
+export const Home = () => (
+  <a
+    className="App-link"
+    href="https://reactjs.org"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={logo} className="App-logo" alt="logo" />
+  </a>
+)
 
 export function About() {
   return <p>Welcome to the About Page</p>

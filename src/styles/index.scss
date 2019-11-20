@@ -1,13 +1,109 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+nav, nav > div  {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+nav { 
+  justify-content: space-between;
+  margin: 1rem auto;
+
+  div > span,
+  div > a {
+    font-family: "Advent Pro", "Open Sans";
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  div > a {
+    padding: 0.25rem;
+    margin: 0 1.5rem;
+    text-decoration: none;
+  }
+
+  div > a.active {
+    padding: 0.25rem 1rem;
+    background-color: #556080;
+    border-radius: 0.25rem;
+  }
+}
+
+#main, .col-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main {
+  flex: 1 0 auto;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: 'Advent Pro', 'Open sans', sans-serif;
+  color: #556080;
+  font-weight: 600;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  input {
+    font-family: "Open Sans";
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+label > input, form > button {
+  height: 2.25rem;
+  border: none;
+}
+
+form {
+  button {
+    background-color: #556080;
+    color: white;
+    font-weight: 700;
+    font-family: "Advent Pro", "Open Sans";
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .small {
+    color: black;
+
+    a { color: #556080; }
+  }
+}
+
+.footer {
+  flex-shrink: 0;
 }

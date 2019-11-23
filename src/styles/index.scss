@@ -14,6 +14,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a, a:hover, a:visited {
+  font-family: "Advent Pro", "Open Sans";
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+button, button:focus {
+  outline: none;
+}
+
 nav, nav > div  {
   display: flex;
   align-items: center;
@@ -29,13 +40,11 @@ nav {
     font-family: "Advent Pro", "Open Sans";
     font-size: 1.25rem;
     font-weight: 700;
-    color: white;
   }
 
   div > a {
     padding: 0.25rem;
     margin: 0 1.5rem;
-    text-decoration: none;
   }
 
   div > a.active {
@@ -101,6 +110,33 @@ form {
     color: black;
 
     a { color: #556080; }
+  }
+}
+
+@keyframes spinner-disc-rotate {
+  0% { transform: rotateZ(-360deg) }
+  100% { transform: rotateZ(0deg) }
+}
+
+.spinner-disc {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 18px;
+  margin: auto;
+  &:after {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border-top: 1px solid #000;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #000;
+    content: '';
+    opacity: .5;
+    animation: spinner-disc-rotate 0.6s linear infinite;
   }
 }
 

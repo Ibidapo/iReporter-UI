@@ -1,17 +1,32 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { Provider } from "react-redux"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { ToastProvider } from "react-toast-notifications"
 
-import AppRoutes from "./AppRoutes"
-import configureStore from "./store/configureStore"
+import Header from "./components/Header"
+import { Home, NotFoundPage } from "./components/App"
+import JoinUs from "./pages/JoinUs"
 import "./styles/index.scss"
 
-const store = configureStore()
-
-const Application = (
-  <Provider store={store}>
-    <AppRoutes />
-  </Provider>
+const application = (
+  <Router>
+    <ToastProvider
+      // autoDismiss
+      // autoDismissTimeout={6000}
+      placement="bottom-center"
+    >
+      <Header />
+      <div id="main">
+        <div className="container">
+          <Switch>
+            <Route path="/join-us" component={JoinUs} />
+            <Route exact path="/" component={Home} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+      </div>
+    </ToastProvider>
+  </Router>
 )
 
-ReactDOM.render(Application, document.getElementById("root"))
+ReactDOM.render(application, document.getElementById("root"))

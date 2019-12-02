@@ -6,6 +6,7 @@ import { ToastProvider } from "react-toast-notifications"
 import Header from "./components/Header"
 import { Home, NotFoundPage } from "./components/App"
 import JoinUs from "./pages/JoinUs"
+import Login from "./pages/Login"
 import "./styles/index.scss"
 
 const application = (
@@ -20,6 +21,7 @@ const application = (
         <div className="container">
           <Switch>
             <Route path="/join-us" component={JoinUs} />
+            <Route path="/login" component={Login} />
             <Route exact path="/" component={Home} />
             <Route component={NotFoundPage} />
           </Switch>
